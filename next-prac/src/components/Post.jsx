@@ -1,14 +1,11 @@
 import React from 'react'
+import classes from './Post.module.css'
 
-const names = ["Maximilian", 'Manuel'];
-
-export default function Post() {
-const choosename = Math.random() > 0.5 ? names[0] : names[1];
-
+export default function Post(props) {
   return (
-    <div>
-      <p>{choosename}</p>
-      <p>React.js is awesome!</p>
+    <div className='post'>
+      <p>{props.author}</p>
+      <p>{props.body}</p>
     </div>
   )
 }
